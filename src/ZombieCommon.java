@@ -5,13 +5,13 @@ public class ZombieCommon {
 		
 	}
 
-	static final Double maxHealth = 30.0;
-	static final Double attack = 5.0;
+	static final double maxHealth = 30.0;
+	static final double attack = 5.0;
 
 	private boolean isAlive = true;
-	private Double currentHealth = maxHealth;
+	private double currentHealth = maxHealth;
 
-	public Double getHealth() {
+	public double getHealth() {
 
 		return currentHealth;
 

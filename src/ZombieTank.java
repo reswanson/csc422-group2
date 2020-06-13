@@ -5,13 +5,13 @@ public class ZombieTank {
 		
 	}
 	
-	static final Double maxHealth = 150.0;
-	static final Double attack = 20.0;
+	static final double maxHealth = 150.0;
+	static final double attack = 20.0;
 
 	private boolean isAlive = true;
-	private Double currentHealth = maxHealth;
+	private double currentHealth = maxHealth;
 
-	public Double getHealth() {
+	public double getHealth() {
 
 		return currentHealth;
 

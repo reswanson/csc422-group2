@@ -1,5 +1,4 @@
 public class Main {
-    public static void main(String[] args){
-    	System.out.println("zombie    war");
-    }
+   
+	// This class has been made redundant by GameController
 }

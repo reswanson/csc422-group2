@@ -27,7 +27,7 @@ public class GameController {
         System.out.println("But there are " + zombies.size() + " zombies waiting for them.");
 
         //keep fighting back and forth til either Survivors or Zombies are dead
-        while(survivors.size() > 0 || zombies.size() > 0) {
+        while(survivors.size() > 0 && zombies.size() > 0) {
             fightRound(survivors, zombies);
 
             if(zombies.isEmpty()) 

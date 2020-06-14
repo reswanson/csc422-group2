@@ -55,7 +55,7 @@ public class GameController {
 		}
 
 	System.out.println("We have " + survivors.size() + " survivors trying to make it to safety: ( " + numOfChild + " children, " + numOfTeacher + " teachers, " + numOfSoldier + " soldiers )"  );                     
-	System.out.println("But there are " + zombies.size() + " zombies waiting for them. ( " + numOfTank + " tanks, " + numOfCommon + " tanks )" );
+	System.out.println("But there are " + zombies.size() + " zombies waiting for them. ( " + numOfCommon + " common, " + numOfTank + " tanks )" );
 
 
         //keep fighting back and forth til either Survivors or Zombies are dead

@@ -7,11 +7,16 @@ public class GameController {
         for(int i = 0; i < attackers.size(); i++) {
             for(int j = 0; j < defenders.size(); j++) {
             
-                attackers.get(i).attack(defenders.get(j));
+            	ICharacter currentAttacker = attackers.get(i);
+            	ICharacter currentDefender = defenders.get(j);
+            	
+            	
+                currentAttacker.attack(currentDefender);
 
-                if(!defenders.get(j).isAlive()) 
-                    defenders.remove(j);
-                
+                if(!currentDefender.isAlive()) {
+                	System.out.println("\t" + currentAttacker.toString() + " Killed " + currentDefender.toString());
+                    defenders.remove(currentDefender);
+                }
                 if(defenders.isEmpty())
                     break;
             }
@@ -42,6 +47,6 @@ public class GameController {
         if(survivors.size() > 0)
             System.out.println("It seems " + survivors.size() + " have made it to safety.");
         else
-            System.out.println("There are no survivors.");
+            System.out.println("None of the survivors made it");
     }
 }

@@ -42,6 +42,6 @@ public class Child implements ISurvivor {
 
     @Override
     public String toString() {
-        return "Child";
+        return "Child" + " " +  id;
     }
 }

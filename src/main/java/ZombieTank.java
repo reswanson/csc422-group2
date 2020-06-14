@@ -42,6 +42,6 @@ public class ZombieTank implements IZombie {
 
     @Override
     public String toString() {
-        return "ZombieTank";
+        return "Tank" + " " +  id;
     }
 }

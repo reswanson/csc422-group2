@@ -49,5 +49,11 @@ public class ZombieCommon  implements IZombie{
 	public void setCurrentHealth(double d) {
 		currentHealth = d;
 	}
+	
+	@Override 
+	public String toString() {
+		
+		return "Common";
+	}
 
 }

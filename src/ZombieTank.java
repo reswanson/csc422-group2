@@ -42,5 +42,11 @@ public class ZombieTank implements IZombie{
 		currentHealth = d;
 		
 	}
+	
+	@Override 
+	public String toString() {
+		
+		return "Tank";
+	}
 
 }

@@ -7,11 +7,16 @@ public class GameController {
         for(int i = 0; i < attackers.size(); i++) {
             for(int j = 0; j < defenders.size(); j++) {
             
-                attackers.get(i).attack(defenders.get(j));
+            	ICharacter currentAttacker = attackers.get(i);
+            	ICharacter currentDefender = defenders.get(j);
+            	
+            	
+                currentAttacker.attack(currentDefender);
 
-                if(!defenders.get(j).isAlive()) 
-                    defenders.remove(j);
-                
+                if(!currentDefender.isAlive()) {
+                	System.out.println("\t" + currentAttacker.toString() + " Killed " + currentDefender.toString());
+                    defenders.remove(currentDefender);
+                }
                 if(defenders.isEmpty())
                     break;
             }
@@ -23,8 +28,35 @@ public class GameController {
         ArrayList<ICharacter> survivors = Spawner.spawnRandomSurvivors();
         ArrayList<ICharacter> zombies = Spawner.spawnRandomZombies();
 
-        System.out.println("We have " + survivors.size() + " survivors trying to make it to safety.");
-        System.out.println("But there are " + zombies.size() + " zombies waiting for them.");
+        int numOfTank=0;
+        int numOfCommon=0;
+        int numOfChild=0;
+        int numOfTeacher=0;
+        int numOfSoldier=0;
+
+        //gather numbers of each type of survivors
+        for (ICharacter z : survivors) {
+             if(z instanceof Soldier ){
+                  numOfSoldier += 1;
+             } else if(z instanceof Teacher ) {
+                  numOfTeacher +=1;
+             } else if (z instanceof Child ) {
+                  numOfChild +=1;
+             }
+        }
+
+        //gather numbers of each type of zombie
+        for (ICharacter z : zombies) {
+             if (z instanceof ZombieTank) {
+                  numOfTank += 1;
+             } else if (z instanceof ZombieCommon) {
+                  numOfCommon +=1;
+             }
+        }
+
+        System.out.println("We have " + survivors.size() + " survivors trying to make it to safety: ( " + numOfChild + " children, " + numOfTeacher + " teachers, " + numOfSoldier + " soldiers )"  );
+        System.out.println("But there are " + zombies.size() + " zombies waiting for them. ( " + numOfCommon + " common infected, " + numOfTank + " tanks )" );
+
 
         //keep fighting back and forth til either Survivors or Zombies are dead
         while(survivors.size() > 0 && zombies.size() > 0) {
@@ -42,6 +74,6 @@ public class GameController {
         if(survivors.size() > 0)
             System.out.println("It seems " + survivors.size() + " have made it to safety.");
         else
-            System.out.println("There are no survivors.");
+            System.out.println("None of the survivors made it");
     }
 }

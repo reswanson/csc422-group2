@@ -42,6 +42,6 @@ public class Soldier implements ISurvivor {
 
     @Override
     public String toString() {
-        return "Soldier";
+        return "Soldier" + " " +  id;
     }
 }

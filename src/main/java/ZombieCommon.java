@@ -42,6 +42,6 @@ public class ZombieCommon implements IZombie {
 
     @Override
     public String toString() {
-        return "ZombieCommon";
+        return "Common" + " " +  id;
     }
 }

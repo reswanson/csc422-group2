@@ -2,13 +2,13 @@ public interface ICharacter {
 	
     void attack(ICharacter victim);  	//Perform attack on all living members of opposing faction 
 
-    int getHealth();			//Return current health
+    int getHealth();			        //Return current health
 
-    void setHealth(int health);         //set character health
+    void setHealth(int health);         //Set character health
 	
-    int getId();                        //get character id
+    int getId();                        //Get character ID
 
-    void setId(int id);                 //set character id
+    void setId(int id);                 //Set character ID
 
-    boolean isAlive();                  //is the character still in the game?
+    boolean isAlive();                  //Is the character still in the game?
 }

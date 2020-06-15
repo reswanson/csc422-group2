@@ -12,22 +12,22 @@ public class ZombieTank implements IZombie {
 
     @Override
     public int getHealth() {
-	return health;
+    	return health;
     }
 
     @Override
     public void setHealth(int health) {
-	this.health = health;
+    	this.health = health;
     }
 
     @Override
     public void attack(ICharacter victim) {
-	victim.setHealth(victim.getHealth() - attack);
+    	victim.setHealth(victim.getHealth() - attack);
     }
 
     @Override
     public boolean isAlive() {
-	return health > 0;
+    	return health > 0;
     }
 
     @Override
@@ -42,6 +42,6 @@ public class ZombieTank implements IZombie {
 
     @Override
     public String toString() {
-        return "Tank" + " " +  id;
+        return String.format("Tank %d", id);
     }
 }

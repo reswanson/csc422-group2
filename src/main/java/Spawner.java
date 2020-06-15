@@ -1,6 +1,8 @@
 import java.util.*;
 
-//class that generates the Survivors and Zombies 
+/**
+ * Factory for Survivors and Zombies
+ */
 public class Spawner {
 
     //max number of survivors or zombies

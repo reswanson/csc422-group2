@@ -17,7 +17,7 @@ public class Soldier implements ISurvivor {
 
     @Override
     public void attack(ICharacter victim) {
-	victim.setHealth(victim.getHealth() - attack);
+    	victim.setHealth(victim.getHealth() - attack);
     }
 
     @Override
@@ -42,6 +42,6 @@ public class Soldier implements ISurvivor {
 
     @Override
     public String toString() {
-        return "Soldier" + " " +  id;
+        return String.format("Soldier %d", id);
     }
 }

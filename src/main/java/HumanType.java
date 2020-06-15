@@ -1,4 +1,7 @@
 
+/**
+ * Types of Humans for Game
+ */
 public class HumanType
 {
 	public static final int SOLDIER = 0;

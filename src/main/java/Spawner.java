@@ -20,12 +20,12 @@ public class Spawner {
 
             switch (randomZombie) {
                 // if randomly chosen to be 0, create common
-                case 0:
+                case ZombieType.COMMON:
                     zombies.add(new ZombieCommon());
                     break;
 
                 // if randomly chosen to be 1, create tank
-                case 1:
+                case ZombieType.TANK:
                     zombies.add(new ZombieTank());
                     break;
             }
@@ -49,17 +49,17 @@ public class Spawner {
 
             switch (randomHuman) {
                 // if randomly chosen to be 0, create soldier
-                case 0:
+                case HumanType.SOLDIER:
                     survivors.add(new Soldier());
                     break;
 
                 // if randomly chosen to be 1, create teacher
-                case 1:
+                case HumanType.TEACHER:
                     survivors.add(new Teacher());
                     break;
 
                 // if randomly chosen to be 2, create child
-                case 2:
+                case HumanType.CHILD:
                     survivors.add(new Child());
                     break;
             }

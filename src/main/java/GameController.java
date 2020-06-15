@@ -1,7 +1,24 @@
 import java.util.*;
+import com.csc422.localization.*;
 
 public class GameController {
-    //does all the fighting between Survivors and zombies
+	public static ILocalization localization;
+	
+	/**
+	 * Short-hand for System.out.println(String.format(formatStr, args))
+	 * @param formatStr
+	 * @param args
+	 */
+	private static void sprintf (String formatStr, Object ... args)
+	{
+		System.out.println(String.format(formatStr, args));
+	}
+	
+	/**
+     * Completes a round of attacks between attackers and defenders.
+     * @param attackers
+     * @param defenders
+     */
     public static void fightRound(ArrayList<ICharacter> attackers, ArrayList<ICharacter> defenders) {
         
         for(int i = 0; i < attackers.size(); i++) {
@@ -14,7 +31,11 @@ public class GameController {
                 currentAttacker.attack(currentDefender);
 
                 if(!currentDefender.isAlive()) {
-                	System.out.println("\t" + currentAttacker.toString() + " Killed " + currentDefender.toString());
+                	
+                	sprintf(localization.getUnitKilled(), 
+                			currentAttacker, 
+                			currentDefender);
+                	
                     defenders.remove(currentDefender);
                 }
                 if(defenders.isEmpty())
@@ -24,56 +45,68 @@ public class GameController {
     }
     
     public static void main(String[] args) {
+    	//Initialize localization
+    	localization = new LocalizationENUS();
+    	
         //Spawns the Survivors and Zombies for the game
         ArrayList<ICharacter> survivors = Spawner.spawnRandomSurvivors();
         ArrayList<ICharacter> zombies = Spawner.spawnRandomZombies();
 
-        int numOfTank=0;
-        int numOfCommon=0;
-        int numOfChild=0;
-        int numOfTeacher=0;
-        int numOfSoldier=0;
+        int numOfTanks    = 0;
+        int numOfCommon   = 0;
+        int numOfChildren = 0;
+        int numOfTeachers = 0;
+        int numOfSoldiers = 0;
 
-        //gather numbers of each type of survivors
+        //Gather numbers of each type of survivors
         for (ICharacter z : survivors) {
-             if(z instanceof Soldier ){
-                  numOfSoldier += 1;
-             } else if(z instanceof Teacher ) {
-                  numOfTeacher +=1;
+             if (z instanceof Soldier) {
+                  numOfSoldiers++;
+             } else if (z instanceof Teacher) {
+                  numOfTeachers++;
              } else if (z instanceof Child ) {
-                  numOfChild +=1;
+                  numOfChildren++;
              }
         }
 
-        //gather numbers of each type of zombie
+        //Gather numbers of each type of zombie
         for (ICharacter z : zombies) {
              if (z instanceof ZombieTank) {
-                  numOfTank += 1;
+                  numOfTanks++;
              } else if (z instanceof ZombieCommon) {
-                  numOfCommon +=1;
+                  numOfCommon++;
              }
         }
 
-        System.out.println("We have " + survivors.size() + " survivors trying to make it to safety: ( " + numOfChild + " children, " + numOfTeacher + " teachers, " + numOfSoldier + " soldiers )"  );
-        System.out.println("But there are " + zombies.size() + " zombies waiting for them. ( " + numOfCommon + " common infected, " + numOfTank + " tanks )" );
+        //Display number of survivors
+        sprintf(localization.getSurvivorStatus(),
+        		survivors.size(),
+        		numOfChildren,
+        		numOfTeachers,
+        		numOfSoldiers);
+        
+        //Display number of zombies
+        sprintf(localization.getZombieStatus(),
+        		zombies.size(),
+        		numOfCommon,
+        		numOfTanks);
 
-
-        //keep fighting back and forth til either Survivors or Zombies are dead
-        while(survivors.size() > 0 && zombies.size() > 0) {
+        //Keep fighting back and forth til either Survivors or Zombies are dead
+        while (survivors.size() > 0 && zombies.size() > 0) {
             fightRound(survivors, zombies);
 
-            if(zombies.isEmpty()) 
+            if (zombies.isEmpty()) 
                 break;
 
             fightRound(zombies, survivors);
 
-            if(survivors.isEmpty()) 
+            if (survivors.isEmpty()) 
                 break;
         }
 
-        if(survivors.size() > 0)
-            System.out.println("It seems " + survivors.size() + " have made it to safety.");
+        if (survivors.size() > 0)
+            sprintf(localization.getSurvivorsWon(), survivors.size());
         else
-            System.out.println("None of the survivors made it");
+            sprintf(localization.getZombiesWon());
     }
 }

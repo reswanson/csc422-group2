@@ -1,5 +1,6 @@
-//class for the Common Infected zombie
-
+/**
+ * Class for the Common Infected Zombie
+ */
 public class ZombieCommon implements IZombie {
     private int health = 30;
     private int attack = 5;
@@ -22,7 +23,7 @@ public class ZombieCommon implements IZombie {
 
     @Override
     public boolean isAlive() {
-	return health > 0;
+    	return health > 0;
     }
 
     @Override
@@ -37,11 +38,11 @@ public class ZombieCommon implements IZombie {
 	
     @Override
     public void setHealth(int health) {
-	this.health = health;
+    	this.health = health;
     }
 
     @Override
     public String toString() {
-        return "Common" + " " +  id;
+        return String.format("Common %d", id);
     }
 }

@@ -1,7 +1,11 @@
+
+import java.io.IOException;
 import java.util.*;
 
 public class GameController {
     //does all the fighting between Survivors and zombies
+	
+	
     public static void fightRound(ArrayList<ICharacter> attackers, ArrayList<ICharacter> defenders) {
         
         for(int i = 0; i < attackers.size(); i++) {
@@ -23,10 +27,29 @@ public class GameController {
         }
     }
     
+    public static void initializeAssets() {
+    	
+    	// Load weapon assets from weapons.json
+		try {
+			AssetLoader.readWeaponAssetsFromFile();
+		} catch (IOException e) {
+
+			e.printStackTrace();
+
+		}
+    	
+    }
     public static void main(String[] args) {
+    	
+    	
+    	initializeAssets();
+    	
         //Spawns the Survivors and Zombies for the game
         ArrayList<ICharacter> survivors = Spawner.spawnRandomSurvivors();
         ArrayList<ICharacter> zombies = Spawner.spawnRandomZombies();
+        
+        
+        
 
         int numOfTank=0;
         int numOfCommon=0;

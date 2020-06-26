@@ -74,7 +74,7 @@ public class Spawner {
 	}
 
 	public static ArrayList<IWeapon> spawnWeaponCache() {
-		ArrayList<IWeapon> cache = new ArrayList<IWeapon>(20);
+		ArrayList<IWeapon> cache = new ArrayList<>(MAX_CAPACITY);
 		
 		Random rand = new Random();
 		int totalWeapons = 5 + rand.nextInt(15 + 1);

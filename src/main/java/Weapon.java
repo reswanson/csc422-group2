@@ -19,9 +19,10 @@ public class Weapon implements IWeapon {
 	public Weapon(int guid) {
 
 		this.guid = guid;
-		//this.accuracy = accuracy;
-		//this.damage = damage;
-		//Will need to set accuracy and damage for this constructor.
+		this.accuracy = 0;
+		this.damage = 0;
+		//TODO Update getAccuracy and getDamage methods to make this constructor work. 
+		//currently sets accuracy and damage to 0
 		
 	}
 	
@@ -30,12 +31,18 @@ public class Weapon implements IWeapon {
 
 		return guid;
 	}
-
-
-	@Override
-	public void setDamage(double damage) {
-		// TODO Auto-generated method stub
-
+	public double getAccuracy() {
+		
+		return accuracy;
+		
 	}
+	
+	public double getDamage() {
+		
+		return damage;
+		
+	}
+
+
 
 }

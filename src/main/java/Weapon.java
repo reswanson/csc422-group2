@@ -15,7 +15,15 @@ public class Weapon implements IWeapon {
 		this.accuracy = accuracy;
 		this.damage = damage;
 		
-	}	
+	}
+	public Weapon(int guid) {
+
+		this.guid = guid;
+		//this.accuracy = accuracy;
+		//this.damage = damage;
+		//Will need to set accuracy and damage for this constructor.
+		
+	}
 	
 
 	public int getId() {

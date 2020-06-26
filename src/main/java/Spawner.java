@@ -73,7 +73,53 @@ public class Spawner {
 		return survivors;
 	}
 
-	public static WeaponCache spawnWeaponCache() {
+	public static ArrayList<IWeapon> spawnWeaponCache() {
+		ArrayList<IWeapon> cache = new ArrayList<IWeapon>(20);
+		
+		Random rand = new Random();
+		int totalWeapons = 5 + rand.nextInt(15 + 1);
+		
+		for (int i = 0; i < totalWeapons; i++) {
+			int randomWeapon = rand.nextInt(8);
+			
+			switch (randomWeapon) {
+			case 0:
+				//Set to shotgun 
+				cache.add(new Weapon(507114100));
+				break;
+			case 1:
+				//Set to Submachine Gun 
+				cache.add(new Weapon(507114200));
+				break;
+			case 2:
+				//Set to Assault Rifle
+				cache.add(new Weapon(507114250));
+				break;
+			case 3:
+				//Set to Pistol 
+				cache.add(new Weapon(507114300));
+				break;
+			case 4:
+				//Set to Axe 
+				cache.add(new Weapon(507114500));
+				break;
+			case 5:
+				//Set to Crowbar 
+				cache.add(new Weapon(507114510));
+				break;
+			case 6:
+				//Set to Frying Pan 
+				cache.add(new Weapon(507114520));
+				break;
+			case 7:
+				//Set to Katana 
+				cache.add(new Weapon(507114530));
+				break;
+			
+			
+			}
+		}
+		
 		return null;
 
 

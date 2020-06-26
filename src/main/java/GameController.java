@@ -40,9 +40,11 @@ public class GameController {
     	
     }
     public static void main(String[] args) {
+    	WeaponCache cache = new WeaponCache();	
     	
     	
     	initializeAssets();
+    	
     	
         //Spawns the Survivors and Zombies for the game
         ArrayList<ICharacter> survivors = Spawner.spawnRandomSurvivors();

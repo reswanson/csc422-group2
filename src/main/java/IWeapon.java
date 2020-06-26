@@ -1,3 +1,8 @@
-public interface IWeapon extends IWeapons {
+public interface IWeapon{
 
+	
+	
+
+	
+	public void setDamage(double damage);
 }

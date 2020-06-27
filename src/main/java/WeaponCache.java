@@ -28,7 +28,15 @@ public class WeaponCache {
 	public boolean isEmpty() {
 		return cache.size()==0;
 	}
+	public IWeapon getWeapon( ) {
+		return cache.remove(0);
+	}
 	
+	public void printCache() {
+		for(IWeapon weapon : cache) {
+			System.out.println(weapon);
+		}
+	}
 	
 	
 }

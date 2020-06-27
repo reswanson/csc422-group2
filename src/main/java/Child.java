@@ -19,9 +19,6 @@ public class Child implements ISurvivor {
 	// Creates a Child with a Weapon 
 	public Child(IWeapon w) {
 		
-		
-		
-		
 	}
 
 
@@ -32,7 +29,8 @@ public class Child implements ISurvivor {
     }
 
     public void attack(ICharacter victim) {
-	victim.setHealth(victim.getHealth() - attack);
+    	
+    	victim.setHealth(victim.getHealth() - attack);
     }
 
     public int getHealth() {
@@ -58,11 +56,23 @@ public class Child implements ISurvivor {
 
 	public void setWeapon(IWeapon w) {
 		heldWeapon = w;
-		
+		attack = (int) heldWeapon.getDamage();
 	}
+	
 	public IWeapon getWeapon() {
 		
 		
 		return heldWeapon;
+	}
+
+	@Override
+	public double getAttack() {
+		return attack;
+	}
+
+	@Override
+	public void setAttack(int attack) {
+		attack = (int) heldWeapon.getDamage();
+		
 	}
 }

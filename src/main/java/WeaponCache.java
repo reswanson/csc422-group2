@@ -8,10 +8,6 @@ public class WeaponCache {
 	
 	public WeaponCache() {
 		
-		for(int i=0;i<20;i++) {
-			int rand = (int) (Math.random()*(10));
-			
-		}
 		
 	}
 

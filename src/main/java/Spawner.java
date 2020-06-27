@@ -85,35 +85,35 @@ public class Spawner {
 			switch (randomWeapon) {
 			case 0:
 				//Set to shotgun 
-				cache.add(new Weapon(507114100));
+				cache.add(new Weapon(1));
 				break;
 			case 1:
 				//Set to Submachine Gun 
-				cache.add(new Weapon(507114200));
+				cache.add(new Weapon(2));
 				break;
 			case 2:
 				//Set to Assault Rifle
-				cache.add(new Weapon(507114250));
+				cache.add(new Weapon(3));
 				break;
 			case 3:
 				//Set to Pistol 
-				cache.add(new Weapon(507114300));
+				cache.add(new Weapon(4));
 				break;
 			case 4:
 				//Set to Axe 
-				cache.add(new Weapon(507114500));
+				cache.add(new Weapon(5));
 				break;
 			case 5:
 				//Set to Crowbar 
-				cache.add(new Weapon(507114510));
+				cache.add(new Weapon(6));
 				break;
 			case 6:
 				//Set to Frying Pan 
-				cache.add(new Weapon(507114520));
+				cache.add(new Weapon(7));
 				break;
 			case 7:
 				//Set to Katana 
-				cache.add(new Weapon(507114530));
+				cache.add(new Weapon(8));
 				break;
 			
 			

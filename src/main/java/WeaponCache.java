@@ -10,10 +10,23 @@ public class WeaponCache {
 		
 		for(int i=0;i<20;i++) {
 			int rand = (int) (Math.random()*(10));
-			System.out.println(rand);
 			
 		}
 		
+	}
+
+	public void add(Weapon wep) {
+		cache.add(wep);
+		
+	}
+	public void get(int id) {
+		cache.get(id);
+	}
+	public int size() {
+		return cache.size();
+	}
+	public boolean isEmpty() {
+		return cache.size()==0;
 	}
 	
 	

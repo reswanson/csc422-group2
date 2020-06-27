@@ -55,8 +55,10 @@ public class Child implements ISurvivor {
 
 
 	public void setWeapon(IWeapon w) {
+		if(w != null) {
 		heldWeapon = w;
 		attack = (int) heldWeapon.getDamage();
+		}
 	}
 	
 	public IWeapon getWeapon() {

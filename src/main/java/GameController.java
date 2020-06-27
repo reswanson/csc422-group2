@@ -48,12 +48,12 @@ public class GameController {
         //Spawns the Survivors and Zombies for the game
         ArrayList<ICharacter> survivors = Spawner.spawnRandomSurvivors();
         ArrayList<ICharacter> zombies = Spawner.spawnRandomZombies();
-        WeaponCache weapons = new WeaponCache();
         
-        weapons.printCache();
+        //Spawns the weapons cache for the game
+        WeaponCache cache = Spawner.spawnWeaponCache(survivors.size());
         
         for(ICharacter survivor : survivors) {
-        	((ISurvivor) survivor).setWeapon(weapons.getWeapon());
+        	((ISurvivor) survivor).setWeapon(cache.getWeapon());
         }
         
         for(ICharacter survivor : survivors) {
@@ -63,8 +63,7 @@ public class GameController {
         }
         
 
-        //Spawns the weapons cache for the game
-        WeaponCache cache = Spawner.spawnWeaponCache(survivors.size());
+    
 
         int numOfTank=0;
         int numOfCommon=0;

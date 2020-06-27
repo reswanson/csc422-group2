@@ -23,7 +23,9 @@ public class WeaponCache {
 		return cache.size()==0;
 	}
 	public IWeapon getWeapon( ) {
+		if(!cache.isEmpty())
 		return cache.remove(0);
+		else return null;
   }
 	
 	public void printCache() {

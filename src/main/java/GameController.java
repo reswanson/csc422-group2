@@ -11,11 +11,13 @@ public class GameController {
         for(int i = 0; i < attackers.size(); i++) {
             for(int j = 0; j < defenders.size(); j++) {
             
+            	
             	ICharacter currentAttacker = attackers.get(i);
             	ICharacter currentDefender = defenders.get(j);
             	
             	
                 currentAttacker.attack(currentDefender);
+                System.out.println(currentAttacker.getWeaponId());
 
                 if(!currentDefender.isAlive()) {
                 	System.out.println("\t" + currentAttacker.toString() + " Killed " + currentDefender.toString());

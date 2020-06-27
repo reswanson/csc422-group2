@@ -1,10 +1,13 @@
 //class for the Teacher Survivor
 
-public class Teacher implements ISurvivor {
+public class Teacher(int weaponId) implements ISurvivor {
+	
     private int health = 50;
     private int attack = 5;
     private static int nextId = 1;
     private int id;
+    private int myWeapon=weaponId;
+
 
     public Teacher() { 
         id = nextId++;

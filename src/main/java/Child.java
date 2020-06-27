@@ -1,10 +1,14 @@
 //class for the Child Survivor
 
-public class Child implements ISurvivor {
+//public class Child(int weaponId) implements ISurvivor {
+public class Child(int weaponId) implements ISurvivor {
+
     private int health = 20;
     private int attack = 2;
     private static int nextId = 1;
     private int id;
+    private int myWeapon=weaponId;
+
 
     public Child() { 
         id = nextId++;

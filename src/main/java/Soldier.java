@@ -5,6 +5,8 @@ public class Soldier implements ISurvivor {
     private int attack = 10;
     private static int nextId = 1;
     private int id;
+    private IWeapon heldWeapon;
+
 
     public Soldier() { 
         id = nextId++;
@@ -25,23 +27,38 @@ public class Soldier implements ISurvivor {
         return health;
     }
 
-    @Override
+
     public boolean isAlive() {
         return health > 0;
     }
 
-    @Override
     public int getId() { 
         return id; 
     }
 
-    @Override
     public void setId(int id) {
         this.id = id;
     }
 
-    @Override
+
+
     public String toString() {
         return "Soldier" + " " +  id;
     }
+
+	public void setWeapon(Weapon w) {
+	
+			heldWeapon = w;
+	}
+
+	public void setWeapon(IWeapon w) {
+		heldWeapon = w;	
+	}
+
+
+	public IWeapon getWeapon() {
+		return heldWeapon;
+	}
+
 }
+

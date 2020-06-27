@@ -1,7 +1,7 @@
-public interface ISurvivor(int weaponId) extends ICharacter {
+public interface ISurvivor extends ICharacter {
 
 	
-	void setWeaponId(int weaponId);                 //set weapon id
-	int getWeaponId();                 //set weapon id
+	public void setWeapon(IWeapon w);                 //set weapon id
+	public IWeapon getWeapon();                 //set weapon id
 
 }

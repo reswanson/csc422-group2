@@ -17,8 +17,13 @@ public class GameController {
             	
             	
                 currentAttacker.attack(currentDefender);
-                System.out.println(currentAttacker.getWeaponId());
-
+                if(currentAttacker instanceof ISurvivor) {
+                System.out.println(((ISurvivor) currentAttacker).getWeapon());
+                }
+                else {
+                	
+                	
+                }
                 if(!currentDefender.isAlive()) {
                 	System.out.println("\t" + currentAttacker.toString() + " Killed " + currentDefender.toString());
                     defenders.remove(currentDefender);

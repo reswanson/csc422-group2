@@ -57,17 +57,17 @@ public class Spawner {
 			switch (randomHuman) {
 			// if randomly chosen to be 0, create soldier
 			case 0:
-				survivors.add(new Soldier(theirWeapon));
+				survivors.add(new Soldier());
 				break;
 
 			// if randomly chosen to be 1, create teacher
 			case 1:
-				survivors.add(new Teacher(theirWeapon));
+				survivors.add(new Teacher());
 				break;
 
 			// if randomly chosen to be 2, create child
 			case 2:
-				survivors.add(new Child(theirWeapon));
+				survivors.add(new Child());
 				break;
 			}
 		

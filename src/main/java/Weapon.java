@@ -18,7 +18,6 @@ public class Weapon implements IWeapon {
 		this.damage = damage;
 	}	
 	
-
 	public int getId() {
 
 		return guid;
@@ -33,20 +32,13 @@ public class Weapon implements IWeapon {
 		return damage;
 	}
 	
-	public int getNumOfWeapons() {
-		// return number of weapons in total cache;
-		return 1;
-	}
-
-	
 	public String getName() {
 		return name;
 	}
 
-		@Override
-	public void setDamage(double damage) {
-		// TODO Auto-generated method stub
-
-	}
-
+	public void setDamage(double d) {
+		
+		damage = d;
+		
+	}	
 }

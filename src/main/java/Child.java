@@ -1,51 +1,68 @@
 //class for the Child Survivor
 
-//public class Child(int weaponId) implements ISurvivor {
-public class Child(int weaponId) implements ISurvivor {
 
+public class Child implements ISurvivor {
+	
     private int health = 20;
     private int attack = 2;
     private static int nextId = 1;
     private int id;
-    private int myWeapon=weaponId;
-
+    private IWeapon heldWeapon;
+	
+	
+	//default Child constructor 
 
     public Child() { 
         id = nextId++;
     }
 
-    @Override
+	// Creates a Child with a Weapon 
+	public Child(IWeapon w) {
+		
+		
+		
+		
+	}
+
+
+
+
     public void setHealth(int health) {
         this.health = health;
     }
 
-    @Override
     public void attack(ICharacter victim) {
 	victim.setHealth(victim.getHealth() - attack);
     }
 
-    @Override
     public int getHealth() {
         return health;
     }
-
-    @Override
+    
     public boolean isAlive() {
         return health > 0;
     }
 
-    @Override
     public int getId() { 
         return id; 
     }
 
-    @Override
     public void setId(int id) {
         this.id = id;
     }
 
-    @Override
     public String toString() {
         return "Child" + " " +  id;
     }
+
+
+	public void setWeapon(IWeapon w) {
+		heldWeapon = w;
+		
+	}
+	public IWeapon getWeapon() {
+		
+		
+		return heldWeapon;
+	}
 }

@@ -1,10 +1,13 @@
 //class for the Teacher Survivor
 
 public class Teacher implements ISurvivor {
+	
     private int health = 50;
     private int attack = 5;
     private static int nextId = 1;
     private int id;
+    private IWeapon heldWeapon;
+
 
     public Teacher() { 
         id = nextId++;
@@ -44,4 +47,15 @@ public class Teacher implements ISurvivor {
     public String toString() {
         return "Teacher" + " " +  id;
     }
+
+	@Override
+	public void setWeapon(IWeapon w) {
+			heldWeapon = w;
+		
+	}
+
+	@Override
+	public IWeapon getWeapon() {
+		return heldWeapon;
+	}
 }

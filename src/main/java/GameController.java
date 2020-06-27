@@ -39,20 +39,33 @@ public class GameController {
 		}
     	
     }
-    public static void main(String[] args) {	
+    public static void main(String[] args) {
     	
     	
     	initializeAssets();
     	
-    	
+
         //Spawns the Survivors and Zombies for the game
         ArrayList<ICharacter> survivors = Spawner.spawnRandomSurvivors();
         ArrayList<ICharacter> zombies = Spawner.spawnRandomZombies();
+        WeaponCache weapons = new WeaponCache();
         
+        weapons.printCache();
+        
+        for(ICharacter survivor : survivors) {
+        	((ISurvivor) survivor).setWeapon(weapons.getWeapon());
+        }
+        
+        for(ICharacter survivor : survivors) {
+        	System.out.println(survivor + " has a " + ((ISurvivor) survivor).getWeapon());
+        	System.out.println("Attack Power: " + survivor.getAttack());
+        	System.out.println();
+        }
+        
+
         //Spawns the weapons cache for the game
         WeaponCache cache = Spawner.spawnWeaponCache(survivors.size());
 
-        
         int numOfTank=0;
         int numOfCommon=0;
         int numOfChild=0;

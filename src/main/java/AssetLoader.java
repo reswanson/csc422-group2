@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -17,7 +16,7 @@ public class AssetLoader {
 
 	// Reads Assets from JSON file and converts to usable Java objects
 	public static void readWeaponAssetsFromFile() throws IOException {
-		
+
 		JSONParser parser = new JSONParser();
 
 		String path = new File(".").getCanonicalPath();

@@ -1,16 +1,10 @@
-import org.json.simple.JSONObject;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.*;
-
 
 public class Weapon implements IWeapon {
 
-
-      
-	
 	private int guid;
 	private double accuracy;
 	private double damage;
+
 	private String name;
 
 	public Weapon() {
@@ -22,6 +16,7 @@ public class Weapon implements IWeapon {
 		this.guid = guid;
 		this.accuracy = accuracy;
 		this.damage = damage;
+
 		
 	}
 	public Weapon(int guidIn) {
@@ -34,27 +29,35 @@ public class Weapon implements IWeapon {
 
 		
 	}
+
 	
 
 	public int getId() {
 
 		return guid;
 	}
+
 	public double getAccuracy() {
-		
+
 		return accuracy;
-		
 	}
 	
 	public double getDamage() {
-		
 		return damage;
-		
 	}
+	
 	public String getName() {
 		return name;
 	}
 
-
+	public void setDamage(double d) {
+		
+		damage = d;
+		
+	}
+	
+	public String toString() {  //Redundent, do we need this?
+		return name;
+	}
 
 }

@@ -42,16 +42,17 @@ public class GameController {
     public static void main(String[] args) {	
     	
     	
-
     	initializeAssets();
+    	
+    	//Spawns the weapons cache for the game
+        ArrayList<IWeapon> cache = Spawner.spawnWeaponCache();
     	
     	
         //Spawns the Survivors and Zombies for the game
         ArrayList<ICharacter> survivors = Spawner.spawnRandomSurvivors();
         ArrayList<ICharacter> zombies = Spawner.spawnRandomZombies();
         
-        //Spawns the weapons cache for the game
-        ArrayList<IWeapon> cache = Spawner.spawnWeaponCache();
+        
 
         int numOfTank=0;
         int numOfCommon=0;

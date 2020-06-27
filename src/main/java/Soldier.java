@@ -19,7 +19,7 @@ public class Soldier implements ISurvivor {
 
     @Override
     public void attack(ICharacter victim) {
-	victim.setHealth(victim.getHealth() - attack);
+    	victim.setHealth(victim.getHealth() - attack);
     }
 
     @Override
@@ -46,13 +46,9 @@ public class Soldier implements ISurvivor {
         return "Soldier" + " " +  id;
     }
 
-	public void setWeapon(Weapon w) {
-	
-			heldWeapon = w;
-	}
-
 	public void setWeapon(IWeapon w) {
-		heldWeapon = w;	
+		heldWeapon = w;
+		attack = (int) heldWeapon.getDamage();
 	}
 
 
@@ -60,5 +56,14 @@ public class Soldier implements ISurvivor {
 		return heldWeapon;
 	}
 
+	@Override
+	public double getAttack() {
+		return attack;
+	}
+
+	@Override
+	public void setAttack(int attack) {
+		attack = (int) heldWeapon.getDamage();
+	}
 }
 

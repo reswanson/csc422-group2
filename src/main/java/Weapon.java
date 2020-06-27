@@ -40,5 +40,9 @@ public class Weapon implements IWeapon {
 		
 		damage = d;
 		
-	}	
+	}
+	
+	public String toString() {
+		return name;
+	}
 }

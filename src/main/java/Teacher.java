@@ -20,7 +20,7 @@ public class Teacher implements ISurvivor {
 
     @Override
     public void attack(ICharacter victim) {
-	victim.setHealth(victim.getHealth() - attack);
+    	victim.setHealth(victim.getHealth() - attack);
     }
 
     @Override
@@ -50,12 +50,23 @@ public class Teacher implements ISurvivor {
 
 	@Override
 	public void setWeapon(IWeapon w) {
-			heldWeapon = w;
-		
+		heldWeapon = w;
+		attack = (int) heldWeapon.getDamage();
 	}
 
 	@Override
 	public IWeapon getWeapon() {
 		return heldWeapon;
+	}
+
+	@Override
+	public double getAttack() {
+		return attack;
+	}
+	
+	@Override
+	public void setAttack(int attack) {
+		attack = (int) heldWeapon.getDamage();
+		
 	}
 }

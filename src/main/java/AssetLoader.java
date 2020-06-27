@@ -55,6 +55,6 @@ public class AssetLoader {
 
 	private static Weapon parseWeaponObject(JSONObject obj) {
 		weaponsNameById.put((int)((long)obj.get("guid")), (String)obj.get("name"));
-		return new Weapon((int) ((long) obj.get("guid")), (String)obj.get("name"), (double) obj.get("accuracy"), (double) obj.get("damage"));
+		return new Weapon((int) ((long) obj.get("guid")), (double) obj.get("accuracy"), (double) obj.get("damage"));
 	}
 }

@@ -7,22 +7,29 @@ public class WeaponCache {
 	
 	public WeaponCache() {
 
-		for(int i = 0; i < 20; i++) {
-			Random rand = new Random();
-			int randomWeapon = rand.nextInt(8 + 1);
-			
-			Weapon weapon = AssetLoader.weapons.get(randomWeapon);
-			
-			cache.add(weapon);
-		}
 	}
-	
-	public Weapon getWeapon( ) {
+
+	public void add(Weapon wep) {
+		cache.add(wep);
+		
+	}
+	public void get(int id) {
+		cache.get(id);
+	}
+	public int size() {
+		return cache.size();
+	}
+	public boolean isEmpty() {
+		return cache.size()==0;
+	}
+	public IWeapon getWeapon( ) {
+		if(!cache.isEmpty())
 		return cache.remove(0);
-	}
+		else return null;
+  }
 	
 	public void printCache() {
-		for(Weapon weapon : cache) {
+		for(IWeapon weapon : cache) {
 			System.out.println(weapon);
 		}
 	}

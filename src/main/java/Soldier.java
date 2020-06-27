@@ -47,8 +47,10 @@ public class Soldier implements ISurvivor {
     }
 
 	public void setWeapon(IWeapon w) {
+		if(w != null) {
 		heldWeapon = w;
 		attack = (int) heldWeapon.getDamage();
+		}
 	}
 
 

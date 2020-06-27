@@ -52,9 +52,6 @@ public class GameController {
         
         //Spawns the weapons cache for the game
         ArrayList<IWeapon> cache = Spawner.spawnWeaponCache();
-        
-        
-        
 
         int numOfTank=0;
         int numOfCommon=0;

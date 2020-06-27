@@ -120,7 +120,7 @@ public class Spawner {
 			}
 		}
 		
-		return null;
+		return cache;
 
 
 	}

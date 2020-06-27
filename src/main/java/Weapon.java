@@ -1,9 +1,17 @@
+import org.json.simple.JSONObject;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.*;
+
 
 public class Weapon implements IWeapon {
 
+
+      
+	
 	private int guid;
 	private double accuracy;
 	private double damage;
+	private String name;
 
 	public Weapon() {
 
@@ -16,13 +24,14 @@ public class Weapon implements IWeapon {
 		this.damage = damage;
 		
 	}
-	public Weapon(int guid) {
+	public Weapon(int guidIn) {
+		
+		
+		guid = guidIn;
+		accuracy = AssetLoader.weapons.get(guidIn).getAccuracy();
+		damage = AssetLoader.weapons.get(guidIn).getDamage();
+		name = AssetLoader.weaponsNameById.get(guidIn);
 
-		this.guid = guid;
-		this.accuracy = 0;
-		this.damage = 0;
-		//TODO Update getAccuracy and getDamage methods to make this constructor work. 
-		//currently sets accuracy and damage to 0
 		
 	}
 	
@@ -41,6 +50,9 @@ public class Weapon implements IWeapon {
 		
 		return damage;
 		
+	}
+	public String getName() {
+		return name;
 	}
 
 

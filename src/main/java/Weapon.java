@@ -56,7 +56,7 @@ public class Weapon implements IWeapon {
 		
 	}
 	
-	public String toString() {  //Redundent, do we need this?
+	public String toString() {  //Redundent, do we need this? see getName()
 		return name;
 	}
 

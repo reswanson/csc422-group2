@@ -44,13 +44,13 @@ public class GameController {
     	
     	initializeAssets();
     	
-    	//Spawns the weapons cache for the game
-        WeaponCache cache = Spawner.spawnWeaponCache();
+    	
         //Spawns the Survivors and Zombies for the game
         ArrayList<ICharacter> survivors = Spawner.spawnRandomSurvivors();
         ArrayList<ICharacter> zombies = Spawner.spawnRandomZombies();
         
-        
+        //Spawns the weapons cache for the game
+        WeaponCache cache = Spawner.spawnWeaponCache(survivors.size());
 
         
         int numOfTank=0;

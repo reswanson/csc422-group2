@@ -51,9 +51,6 @@ public class Spawner {
 
 			int randomHuman = rand.nextInt(3);
 
-			// get a random number thats between 0 and the max number of weapons in the cache
-			int theirWeapon=2;
-			
 			switch (randomHuman) {
 			// if randomly chosen to be 0, create soldier
 			case 0:
@@ -70,15 +67,14 @@ public class Spawner {
 				survivors.add(new Child());
 				break;
 			}
-		
 		}
 
 		// return ArrayList of survivors
 		return survivors;
 	}
 
-	public static ArrayList<IWeapon> spawnWeaponCache() {
-		ArrayList<IWeapon> cache = new ArrayList<>(MAX_CAPACITY);
+	public static WeaponCache spawnWeaponCache() {
+		WeaponCache cache = new WeaponCache();
 		
 		Random rand = new Random();
 		int totalWeapons = 5 + rand.nextInt(15 + 1);

@@ -7,7 +7,6 @@ public class Soldier implements ISurvivor {
     private int id;
     private IWeapon heldWeapon;
 
-
     public Soldier() { 
         id = nextId++;
     }
@@ -40,8 +39,6 @@ public class Soldier implements ISurvivor {
         this.id = id;
     }
 
-
-
     public String toString() {
         return "Soldier" + " " +  id;
     }
@@ -52,7 +49,6 @@ public class Soldier implements ISurvivor {
 		attack = (int) heldWeapon.getDamage();
 		}
 	}
-
 
 	public IWeapon getWeapon() {
 		return heldWeapon;

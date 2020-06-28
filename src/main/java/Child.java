@@ -9,27 +9,17 @@ public class Child implements ISurvivor {
     private int id;
     private IWeapon heldWeapon;
 	
-	
 	//default Child constructor 
 
     public Child() { 
         id = nextId++;
     }
 
-	// Creates a Child with a Weapon 
-	public Child(IWeapon w) {
-		
-	}
-
-
-
-
     public void setHealth(int health) {
         this.health = health;
     }
 
     public void attack(ICharacter victim) {
-    	
     	victim.setHealth(victim.getHealth() - attack);
     }
 
@@ -40,7 +30,7 @@ public class Child implements ISurvivor {
     public boolean isAlive() {
         return health > 0;
     }
-
+    
     public int getId() { 
         return id; 
     }
@@ -53,7 +43,6 @@ public class Child implements ISurvivor {
         return "Child" + " " +  id;
     }
 
-
 	public void setWeapon(IWeapon w) {
 		if(w != null) {
 		heldWeapon = w;
@@ -61,9 +50,7 @@ public class Child implements ISurvivor {
 		}
 	}
 	
-	public IWeapon getWeapon() {
-		
-		
+	public IWeapon getWeapon() {		
 		return heldWeapon;
 	}
 

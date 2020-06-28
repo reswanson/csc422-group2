@@ -8,7 +8,6 @@ public class Teacher implements ISurvivor {
     private int id;
     private IWeapon heldWeapon;
 
-
     public Teacher() { 
         id = nextId++;
     }
@@ -32,7 +31,7 @@ public class Teacher implements ISurvivor {
     public boolean isAlive() {
         return health > 0;
     }
-
+    
     @Override
     public int getId() { 
         return id; 

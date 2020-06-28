@@ -1,6 +1,4 @@
-import java.io.IOException;
 import java.util.*;
-import java.util.Map.Entry;
 
 //class that generates the Survivors and Zombies 
 public class Spawner {

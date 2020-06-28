@@ -1,3 +1,5 @@
+import java.util.Random;
+
 //class for the Teacher Survivor
 
 public class Teacher implements ISurvivor {
@@ -17,9 +19,31 @@ public class Teacher implements ISurvivor {
         this.health = health;
     }
 
+//    @Override
+//    public void attack(ICharacter victim) {
+//    	victim.setHealth(victim.getHealth() - attack);
+//    }
+    
     @Override
     public void attack(ICharacter victim) {
-    	victim.setHealth(victim.getHealth() - attack);
+    	Random rand = new Random();
+		int attackChance = rand.nextInt(100 + 1);
+
+		if (attackChance <= heldWeapon.getAccuracy()) {
+			//System.out.println("Survivor has great aim.");
+			//System.out.println(heldWeapon);
+			//System.out.println("Random: " + attackChance + " Weapon Accuracy: " + heldWeapon.getAccuracy());
+			
+			victim.setHealth(victim.getHealth() - attack);
+			//System.out.println();
+		}
+
+		//else {
+			//System.out.println("Survivor has horrible aim.");
+			//System.out.println("Random: " + attackChance + " Weapon Accuracy: " + heldWeapon.getAccuracy());
+			//System.out.println(heldWeapon);
+			//System.out.println();
+		//}
     }
 
     @Override

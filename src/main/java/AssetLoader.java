@@ -41,16 +41,15 @@ public class AssetLoader {
 			e.printStackTrace();
 		}
 		
-		
+		/*
 		System.out.println(String.format("%5s :", "Assets Archived"));
 		for(Entry<Integer, String> weaponById : weaponsNameById.entrySet()) {
-			
-			
-		System.out.println(String.format("%5d : %1s", weaponById.getKey(), weaponById.getValue()));
-		
-			
+			System.out.println(String.format("%5d : %1s", weaponById.getKey(), weaponById.getValue()));	
 		}
+					
 		System.out.print("\n");
+		*/
+		
 	}
 
 	private static Weapon parseWeaponObject(JSONObject obj) {

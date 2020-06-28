@@ -16,8 +16,10 @@ public class GameController {
             	            	
                 currentAttacker.attack(currentDefender);
 
+                                   	
+                    	
                 if(!currentDefender.isAlive()) {
-                	if (currentAttacker.isSurvivor()) {
+                	if ((currentAttacker instanceof Child)|| (currentAttacker instanceof Teacher) || (currentAttacker instanceof Soldier)) {
                     	System.out.println("\t" + currentAttacker.toString() + " Killed " + currentDefender.toString() +  " with a " + ((ISurvivor) currentAttacker).getWeapon());
                 	} else {
                 	System.out.println("\t" + currentAttacker.toString() + " Killed " + currentDefender.toString());

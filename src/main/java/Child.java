@@ -32,10 +32,6 @@ public class Child implements ISurvivor {
         return health > 0;
     }
     
-    public boolean isSurvivor() {
-        return true;
-    }
-
     public int getId() { 
         return id; 
     }

@@ -11,7 +11,6 @@ public interface ICharacter {
     void setId(int id);                 //set character id
 
     boolean isAlive();                  //is the character still in the game?
-    boolean isSurvivor();               //is the character a survivor?
 
     double getAttack();					//get attack power
 }

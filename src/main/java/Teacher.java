@@ -32,11 +32,6 @@ public class Teacher implements ISurvivor {
         return health > 0;
     }
     
-    public boolean isSurvivor() {
-        return true;
-    }
-
-
     @Override
     public int getId() { 
         return id; 

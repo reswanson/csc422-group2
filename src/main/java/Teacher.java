@@ -7,8 +7,6 @@ public class Teacher implements ISurvivor {
     private static int nextId = 1;
     private int id;
     private IWeapon heldWeapon;
-	public boolean isSurvivor=true;
-
 
     public Teacher() { 
         id = nextId++;

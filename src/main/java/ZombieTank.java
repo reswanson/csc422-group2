@@ -29,7 +29,7 @@ public class ZombieTank implements IZombie {
     public boolean isAlive() {
 	return health > 0;
     }
-
+    
     @Override
     public int getId() { 
         return id; 
@@ -44,4 +44,9 @@ public class ZombieTank implements IZombie {
     public String toString() {
         return "Tank" + " " +  id;
     }
+
+	@Override
+	public double getAttack() {
+		return attack;
+	}
 }

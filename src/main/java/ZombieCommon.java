@@ -24,7 +24,7 @@ public class ZombieCommon implements IZombie {
     public boolean isAlive() {
 	return health > 0;
     }
-
+    
     @Override
     public int getId() { 
         return id; 
@@ -44,4 +44,9 @@ public class ZombieCommon implements IZombie {
     public String toString() {
         return "Common" + " " +  id;
     }
+
+	@Override
+	public double getAttack() {
+		return attack;
+	}
 }

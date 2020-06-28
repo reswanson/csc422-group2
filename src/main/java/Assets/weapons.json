@@ -1,0 +1,57 @@
+[{
+    "guid": 0,
+    "name": "none",
+    "accuracy": 0.0,
+    "damage": 0.0
+  },
+  {
+    "guid": 1,
+    "name": "shotgun",
+    "accuracy": 40.0,
+    "damage": 100.0
+  },
+  {
+    "guid": 2,
+    "name": "Submachine Gun",
+    "accuracy": 70.0,
+    "damage": 30.0
+  },
+  {
+    "guid": 3,
+    "name": "Assault Rifle",
+    "accuracy": 80.0,
+    "damage": 45.0
+  },
+  {
+    "guid": 4,
+    "name": "Pistol",
+    "accuracy": 50.0,
+    "damage": 50.0
+  },
+  {
+    "guid": 5,
+    "name": "Axe",
+    "accuracy": 100.0,
+    "damage": 20.0
+  },
+  {
+    "guid": 6,
+    "name": "Crowbar",
+    "accuracy": 100.0,
+    "damage": 15.0
+  },
+  {
+    "guid": 7,
+    "name": "Frying Pan",
+    "accuracy": 100.0,
+    "damage": 10.0
+  },
+  {
+    "guid": 8,
+    "name": "Katana",
+    "accuracy": 100.0,
+    "damage": 60.0
+  }]
+
+
+

@@ -15,14 +15,6 @@ public class Child implements ISurvivor {
         id = nextId++;
     }
 
-	// Creates a Child with a Weapon 
-	public Child(IWeapon w) {
-		
-	}
-
-
-
-
     public void setHealth(int health) {
         this.health = health;
     }

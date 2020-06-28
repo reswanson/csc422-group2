@@ -56,14 +56,14 @@ public class GameController {
         	((ISurvivor) survivor).setWeapon(cache.getWeapon());
         }
         
+        /*
         for(ICharacter survivor : survivors) {
         	System.out.println(survivor + " has a " + ((ISurvivor) survivor).getWeapon());
         	System.out.println("Attack Power: " + survivor.getAttack());
         	System.out.println();
         }
+        */
         
-
-    
 
         int numOfTank=0;
         int numOfCommon=0;

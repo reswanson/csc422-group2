@@ -8,7 +8,8 @@ public class Child implements ISurvivor {
     private static int nextId = 1;
     private int id;
     private IWeapon heldWeapon;
-	
+	public boolean isSurvivor=true;
+
 	
 	//default Child constructor 
 
@@ -39,6 +40,10 @@ public class Child implements ISurvivor {
     
     public boolean isAlive() {
         return health > 0;
+    }
+    
+    public boolean isSurvivor() {
+        return true;
     }
 
     public int getId() { 

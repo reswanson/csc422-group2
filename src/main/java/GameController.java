@@ -13,12 +13,15 @@ public class GameController {
             
             	ICharacter currentAttacker = attackers.get(i);
             	ICharacter currentDefender = defenders.get(j);
-            	
-            	
+            	            	
                 currentAttacker.attack(currentDefender);
 
                 if(!currentDefender.isAlive()) {
+                	if (currentAttacker.isSurvivor()) {
+                    	System.out.println("\t" + currentAttacker.toString() + " Killed " + currentDefender.toString() +  " with a " + ((ISurvivor) currentAttacker).getWeapon());
+                	} else {
                 	System.out.println("\t" + currentAttacker.toString() + " Killed " + currentDefender.toString());
+                	}
                     defenders.remove(currentDefender);
                 }
                 if(defenders.isEmpty())

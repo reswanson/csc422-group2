@@ -5,4 +5,5 @@ public interface ISurvivor extends ICharacter {
 	public IWeapon getWeapon();                 //set weapon id
 	public void setAttack(int attack);
 
+
 }

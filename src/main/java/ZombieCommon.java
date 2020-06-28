@@ -24,6 +24,10 @@ public class ZombieCommon implements IZombie {
     public boolean isAlive() {
 	return health > 0;
     }
+    
+    public boolean isSurvivor() {
+        return false;
+    }
 
     @Override
     public int getId() { 

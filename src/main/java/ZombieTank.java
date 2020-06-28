@@ -30,10 +30,6 @@ public class ZombieTank implements IZombie {
 	return health > 0;
     }
     
-    public boolean isSurvivor() {
-        return false;
-    }
-
     @Override
     public int getId() { 
         return id; 

@@ -20,7 +20,6 @@ public class Child implements ISurvivor {
     }
 
     public void attack(ICharacter victim) {
-    	
     	victim.setHealth(victim.getHealth() - attack);
     }
 
@@ -44,7 +43,6 @@ public class Child implements ISurvivor {
         return "Child" + " " +  id;
     }
 
-
 	public void setWeapon(IWeapon w) {
 		if(w != null) {
 		heldWeapon = w;
@@ -52,9 +50,7 @@ public class Child implements ISurvivor {
 		}
 	}
 	
-	public IWeapon getWeapon() {
-		
-		
+	public IWeapon getWeapon() {		
 		return heldWeapon;
 	}
 

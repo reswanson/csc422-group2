@@ -5,7 +5,6 @@ import java.util.*;
 public class GameController {
     //does all the fighting between Survivors and zombies
 	
-	
     public static void fightRound(ArrayList<ICharacter> attackers, ArrayList<ICharacter> defenders) {
         
         for(int i = 0; i < attackers.size(); i++) {
@@ -14,9 +13,7 @@ public class GameController {
             	ICharacter currentAttacker = attackers.get(i);
             	ICharacter currentDefender = defenders.get(j);
             	            	
-                currentAttacker.attack(currentDefender);
-
-                                   	
+                currentAttacker.attack(currentDefender);                  	
                     	
                 if(!currentDefender.isAlive()) {
                 	if ((currentAttacker instanceof Child)|| (currentAttacker instanceof Teacher) || (currentAttacker instanceof Soldier)) {
@@ -38,17 +35,13 @@ public class GameController {
 		try {
 			AssetLoader.readWeaponAssetsFromFile();
 		} catch (IOException e) {
-
 			e.printStackTrace();
-
 		}
     	
     }
     public static void main(String[] args) {
     	
-    	
     	initializeAssets();
-    	
 
         //Spawns the Survivors and Zombies for the game
         ArrayList<ICharacter> survivors = Spawner.spawnRandomSurvivors();
@@ -67,9 +60,6 @@ public class GameController {
         	System.out.println();
         }
         
-
-    
-
         int numOfTank=0;
         int numOfCommon=0;
         int numOfChild=0;

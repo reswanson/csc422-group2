@@ -2,7 +2,7 @@ public interface ICharacter {
 	
     void attack(ICharacter victim);  	//Perform attack on all living members of opposing faction 
 
-    int getHealth();			//Return current health
+    int getHealth();			        //Return current health
 
     void setHealth(int health);         //set character health
 	
